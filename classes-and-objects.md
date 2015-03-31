@@ -5,7 +5,7 @@ Class name的名命规则的正则表达式为：`^[a-zA-Z_\x7f-\xff][a-zA-Z0-9_
 
 在PHP Class中定义properties(constants and variables)和methods(functions):
 
-```
+```php
 class Person {
   // properties declaration
   public $name = 'a default name';
