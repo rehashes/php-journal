@@ -24,7 +24,7 @@ class Person {
 }
 ```
 ## object assignment
-```
+```php
 $me = new Person();// possible: $class_name = 'Person'; $me = new $class_name();
 $me_alias = &$me;
 $me_too = $me;
@@ -32,7 +32,7 @@ $me_too = $me;
 $me_alias = null; // $me and $me_alias is NULL now
 ```
 ## extends
-```
+```php
 class Parent {
   public function get_name() { return 'parent->'; }
 }
