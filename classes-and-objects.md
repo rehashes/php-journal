@@ -13,8 +13,14 @@ class Person {
   // method declaration
   // this method is non-static and called within a object content.
   // so $this refers to a object
-  public function get_name() {
-    return $this->name;
+  // and self refer to the class itself and is used to access static properties or methods
+  public function description() {
+    return $this->name . ' has ' . self::get_feet_number() . ' feet';
+  }
+  
+  // static method declaration
+  public static function get_feet_number() {
+    return 2;
   }
 }
 ```
