@@ -1,10 +1,9 @@
 # Classes and objects in PHP
 PHP treats objects in the same way as references or handles, meaning that each variable contains an object reference rather than a copy of the entire object.
 
-Class name的名命规则的正则表达式为：`^[a-zA-Z_\x7f-\xff][a-zA-Z0-9_\x7f-\xff]*$`
+Class name regular expression: `^[a-zA-Z_\x7f-\xff][a-zA-Z0-9_\x7f-\xff]*$`
 
-在PHP Class中定义properties(constants and variables)和methods(functions):
-
+##Properties(variables and constants) and methods(functions)
 ```php
 class Person {
   // properties declaration
@@ -31,4 +30,16 @@ $me_alias = &$me;
 $me_too = $me;
 
 $me_alias = null; // $me and $me_alias is NULL now
+```
+## extends
+```
+class Parent {
+  public function get_name() { return 'parent->'; }
+}
+class Child extends Parent {
+  // override: should use the same parameter signature as the parent
+  // except for __construct() and so on
+  // NOTE:no overload in PHP
+  public function get_name() { return parent::get_name() . ' child->'; }
+}
 ```
