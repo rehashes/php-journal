@@ -6,7 +6,12 @@ Class name regular expression: `^[a-zA-Z_\x7f-\xff][a-zA-Z0-9_\x7f-\xff]*$`
 ##Properties(variables and constants) and methods(functions)
 ```php
 class Person {
+
+  // const declaration
+  const FEET_NUM = 2;
   // properties declaration
+  // must be a constant value(can be evaluated at compile time)
+  // can be public, protected, private
   public $name = 'a default name';
   
   // method declaration
@@ -19,7 +24,7 @@ class Person {
   
   // static method declaration
   public static function get_feet_number() {
-    return 2;
+    return self::FEET_NUM;
   }
 }
 ```
