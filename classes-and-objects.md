@@ -38,7 +38,7 @@ $me_too = $me;
 
 $me_alias = null; // $me and $me_alias is NULL now
 ```
-## extends
+## class extends
 
 ```php
 class Parent {
@@ -53,6 +53,28 @@ class Child extends Parent {
 ```
 ## Class autoload (spl_autoload_register() and __autoload())
 
-####NOTE: 
+#### NOTE: 
 - __autoload is discouraged and may be deprecated or removed in the future
 - autoloading is not avaliable when PHP is used in CLI interactive mode
+
+## Constructors and destructors
+
+#### NOTE:
+- You can override __construct() without the same parameter signature as **Parent Class**
+- __destruct() can not have parameters
+- parent constructors and destructors will not be called implicitly.we would have to explicitly call parent::__**struct() 
+
+```php
+class Parent {
+  public function __construct() {
+    echo 'Parent object initialized';
+  }
+}
+
+class Child extends Parent {
+  public function __construct() {
+    parent::__construct();
+    echo 'Child object initialized';
+  }
+}
+```
