@@ -4,6 +4,7 @@ PHP treats objects in the same way as references or handles, meaning that each v
 Class name regular expression: `^[a-zA-Z_\x7f-\xff][a-zA-Z0-9_\x7f-\xff]*$`
 
 ##Properties(variables and constants) and methods(functions)
+
 ```php
 class Person {
 
@@ -29,6 +30,7 @@ class Person {
 }
 ```
 ## object assignment
+
 ```php
 $me = new Person();// possible: $class_name = 'Person'; $me = new $class_name();
 $me_alias = &$me;
@@ -37,6 +39,7 @@ $me_too = $me;
 $me_alias = null; // $me and $me_alias is NULL now
 ```
 ## extends
+
 ```php
 class Parent {
   public function get_name() { return 'parent->'; }
@@ -48,3 +51,8 @@ class Child extends Parent {
   public function get_name() { return parent::get_name() . ' child->'; }
 }
 ```
+## Class autoload (spl_autoload_register() and __autoload())
+
+####NOTE: 
+- __autoload is discouraged and may be deprecated or removed in the future
+- autoloading is not avaliable when PHP is used in CLI interactive mode
