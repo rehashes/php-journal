@@ -38,7 +38,7 @@ $me_too = $me;
 
 $me_alias = null; // $me and $me_alias is NULL now
 ```
-## class extends
+## class extends and override
 
 ```php
 class Parent {
@@ -47,7 +47,7 @@ class Parent {
 class Child extends Parent {
   // override: should use the same parameter signature as the parent
   // except for __construct() and so on
-  // NOTE:no overload in PHP
+  // NOTE: Overload in PHP is different from that in other Object-oriented programming language
   public function get_name() { return parent::get_name() . ' child->'; }
 }
 ```
@@ -78,3 +78,5 @@ class Child extends Parent {
   }
 }
 ```
+
+## Overloading
