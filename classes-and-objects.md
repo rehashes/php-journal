@@ -80,3 +80,5 @@ class Child extends Parent {
 ```
 
 ## Overloading
+
+Overloading in PHP is different from that in other oop language.
